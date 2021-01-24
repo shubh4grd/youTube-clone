@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
+// import Header from "./Header";
 import youtube from "./apis/youtubeapi";
 import VideoList from "./components/VideoList";
 import VideoDetails from "./components/VideoDetails";
@@ -30,10 +31,14 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div className="container">
-          <div className="col-md-8">
-            <SearchBar onFormSubmit={this.onTermSubmit} />
+        <header>
+          <div className="wrap">
+            <div className="searchBar">
+              <SearchBar onFormSubmit={this.onTermSubmit} />
+            </div>
           </div>
+        </header>
+        <div className="container">
           <div className="row">
             <div className="col-md-8">
               <VideoDetails video={this.state.selectedVideo} />

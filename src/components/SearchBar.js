@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchBar.css";
 
 class SearchBar extends React.Component {
   state = {
@@ -18,15 +19,15 @@ class SearchBar extends React.Component {
     return (
       <>
         <form onSubmit={this.onFormSubmit}>
-          <div className="form-group">
+          <div className="search">
             <input
               type="search"
-              className="form-control"
-              placeholder="Search Anything Here!!"
+              className="form"
+              placeholder="Search"
               value={this.state.term}
               onChange={this.onInputChange}
             />
-            <button>Search</button>
+            <button className="form">Search</button>
           </div>
         </form>
       </>
